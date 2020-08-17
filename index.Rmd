@@ -1,5 +1,5 @@
 ---
-title: "The MD in .Rmd:"
+title: "The MD in .Rmd"
 subtitle: "Teaching Clinicians Data Analytics in R"  
 author: 
   - "Ted Laderas, Oregon Health & Science University"
@@ -106,6 +106,9 @@ Two focuses on this course:
 
 - [Ready for R]()
 - Have fail-safes
+
+---
+# Challenges: 
 
 ---
 class: center, middle
