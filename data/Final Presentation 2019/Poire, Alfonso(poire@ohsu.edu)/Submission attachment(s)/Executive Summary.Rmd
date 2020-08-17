@@ -1,0 +1,193 @@
+---
+title: "Executive Summary"
+author: "Rose Goueth, Alfonzo Poire, Ariella Brenner"
+date: "8/22/2019"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r, include=FALSE}
+library(RSQLite)
+library(here)
+library(tidyverse)
+library(dbplyr)
+library(here)
+library(dplyr)
+library(ROCR)
+
+analytic <- read.csv("data/exec_analytic",header=TRUE, sep=" ")
+```
+
+## Why LACE scores are needed
+
+LACE scores are a metric that could be used by everyone in a hospital or healthcare system. Physicians would be able to see the outcome of the regression and could tailor treatment options for patients at high risk of readmission. Financial analysists would be able to track vulnerable patients and general trends within the hospital to suggest possible improvements that would save the organization money and improve patient care quality. Use of this metric will allow desicion makers to see blind spots in the organization's treatment options.
+
+For instance, if we have efficient Congestive Heart Failure (CHF) treatments but outdated ones for stroke, then the comorbidity scores of strokes could increase. This trend would cause an increase in readmissions for stroke patients. LACE indices allow us to allocate more resources to vulnerabilities within the organization.
+
+## Why do we track readmissions?
+
+Tracking patient readmission is crucial for patient treatment and provider costs. 30 day readmission rates  are a common indicator used to track quality of hospital care. If a clinician can accurately predict whether a patient will likely be readmitted then subsequent action can be taken to prevent the patient from returning. If this statistic is not improved, providers will be taking on additional avoidable costs leading to costly quality care for patients.
+
+```{r}
+ggplot(analytic,aes(GENDER,fill=GENDER))+geom_bar()+ggtitle("Gender Distribution")+theme_minimal()
+```
+
+## Why we chose gender
+The first graph shows the distribution of genders within our data. We can see the data is skewed towards males. This is something we must take into account because our model may be more predictive for men than women.
+
+```{r}
+ggplot(analytic,aes(C,fill=GENDER))+geom_bar()+facet_wrap(~Readmit30)+ggtitle("Comorbitity Counts per Gender by Readmission within 30 Days")
+```
+
+## Why gender and comorbities can affect readmissions
+The second graph illustrates readmissions by comorbidity for each gender. This shows there are fewer people being readmitted (a good sign) but the co-morbidities we chose (Congestive Heart Failure and Stroke) do not seem to be highly correlated with readmissions. The figure also shows that there are more men who return then woman, however this may be an artifact of our data set rather than an actual factor.
+
+```{r factor change, include=FALSE}
+analytic <- analytic %>% mutate(C2 = Comorb_1+Comorb_2)
+
+analytic$A <- factor(analytic$A)
+analytic$C2 <- as.numeric(analytic$C2)
+analytic$GENDER <- factor(analytic$GENDER)
+analytic$E <- as.numeric(analytic$E)
+analytic$race <- factor(analytic$race)
+```
+
+
+
+```{r set up test size, include=FALSE}
+dataSize <- nrow(analytic)
+
+testSize <- floor(0.1 * dataSize)
+testSize
+#build our sample index from our row numbers
+testIndex <- sample(dataSize,size = testSize,replace = FALSE)
+
+testSet <- analytic[testIndex,]
+#show first 10 rows of testSet (compare row numbers to testIndex[1:10])
+testIndex[1:10]
+testSet[1:10,]
+#confirm that number of rows in testSet is equal to testSize
+nrow(testSet)
+#build training set (used to build model)
+trainSet <- analytic[-testIndex,]
+```
+
+
+
+```{r naming models}
+#run a simple logistic regression model just using LScore and Ascore
+#we can cast AScore as categorical data using factor()
+MyModel <- glm(Readmit30 ~ L + A + E + GENDER, family = "binomial", data=trainSet)
+
+original <- glm(Readmit30 ~ L + A + E + C2, family = "binomial", data=trainSet)
+```
+
+```{r model summaries}
+#Summarize the model
+summary(MyModel)
+summary(original)
+
+#grab coefficients themselves
+coef(MyModel)
+coef(original)
+```
+
+```{r create model probabilities, include=FALSE}
+modelPredictedProbabilities <- predict(MyModel, newdata=testSet, type = "response")
+##add the modelPredictedProbabilities as a column in testSet
+testSet <- data.frame(testSet, predProb=modelPredictedProbabilities)
+
+modelPredictedProbabilities1 <- predict(original, newdata=testSet, type = "response")
+##add the modelPredictedProbabilities as a column in testSet
+testSet <- data.frame(testSet, predProb=modelPredictedProbabilities1)
+```
+
+```{r more model predictions}
+#predict the logit instead for our testSet
+modelPredictedLogOddsRatio <- predict(MyModel,newdata = testSet)
+#add as another column in our table
+testSetPred <- data.frame(testSet, predLogit = modelPredictedLogOddsRatio)
+#transform the logit to the predictedOdds ratio
+modelPredictedOddsRatio <- exp(modelPredictedLogOddsRatio)
+#add as column in our table
+testSetPred <- data.frame(testSetPred, predOR = modelPredictedOddsRatio)
+#
+final_coef<-exp(coef(MyModel))
+final_coef
+
+modelPredictedLogOddsRatio1 <- predict(original,newdata = testSet)
+#add as another column in our table
+testSetPred1 <- data.frame(testSet, predLogit = modelPredictedLogOddsRatio1)
+#transform the logit to the predictedOdds ratio
+modelPredictedOddsRatio1 <- exp(modelPredictedLogOddsRatio1)
+#add as column in our table
+testSetPred <- data.frame(testSetPred1, predOR = modelPredictedOddsRatio1)
+#
+final_coef1<-exp(coef(original))
+final_coef1
+
+```
+
+```{r last model predictions, include=FALSE}
+modelPredictions <- ifelse(modelPredictedProbabilities < 0.225, 0, 1)
+modelPredictions[1:10]
+
+modelPredictions1 <- ifelse(modelPredictedProbabilities1 < 0.225, 0, 1)
+modelPredictions1[1:10]
+
+truthPredict <- table(testSet$Readmit30, modelPredictions)
+truthPredict
+
+truthPredict1 <- table(testSet$Readmit30, modelPredictions1)
+truthPredict1
+```
+
+```{r calculating accuracy}
+totalCases <- sum(truthPredict)
+misclassified <- truthPredict[1,2] + truthPredict[2,1]
+accuracy <- (totalCases - misclassified) / totalCases
+
+totalCases1 <- sum(truthPredict1)
+misclassified1 <- truthPredict1[1,2] + truthPredict1[2,1]
+accuracy1 <- (totalCases1 - misclassified1) / totalCases1
+
+acc_table <- matrix(c(accuracy,accuracy1), ncol=2, byrow=TRUE)
+colnames(acc_table) <- c("our model","original")
+rownames(acc_table) <- "Accuracy"
+acc_table <- as.table(acc_table)
+acc_table
+```
+
+```{r ROC Curves}
+pr <- prediction(modelPredictedProbabilities, testSet$Readmit30)
+prf <- performance(pr, measure = "tpr", x.measure = "fpr")
+plot(prf, main="Original Model ROC Curve")
+
+```
+```{r}
+pr1 <- prediction(modelPredictedProbabilities1, testSet$Readmit30)
+prf1 <- performance(pr1, measure = "tpr", x.measure = "fpr")
+plot(prf1, main="Our Model ROC Curve")
+```
+
+
+```{r AUC}
+auc <- performance(pr, measure = "auc")
+auc <- auc@y.values[[1]]
+
+auc1 <- performance(pr1, measure = "auc")
+auc1 <- auc1@y.values[[1]]
+
+auc_table <- matrix(c(auc,auc1), ncol=2, byrow=TRUE)
+colnames(auc_table) <- c("our model","original")
+rownames(auc_table) <- "AUC"
+auc_table <- as.table(auc_table)
+auc_table
+
+```
+
+## Summary
+Using the LACE score metric we compared using the original model (a combined LACE score) to using L,A,E scores with gender. We believe this new combination of scores would be a better predictor of 30 day readmissions. Additionally, we postulate that with the inclusion of summed comorbidities would increase the predictive capability of our model. We found our logistic model to be a slightly better representation statistically and clinically (with the addition of gender) of readmission. Reducing the number of readmissions allows for increased patient and provider savings and improved patient care quality. 

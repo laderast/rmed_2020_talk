@@ -1,0 +1,159 @@
+---
+title: "The MD in .Rmd:"
+subtitle: "Teaching Clinicians Data Analytics in R"  
+author: 
+  - "Ted Laderas, Oregon Health & Science University"
+  - "Brian Sikora, Kaiser Permanente Insight"
+date: '`r Sys.Date()`'
+output:
+  xaringan::moon_reader:
+    lib_dir: libs
+    css: xaringan-themer.css
+    nature:
+      ratio: '16:9'
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+---
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+```
+
+```{r xaringan-themer, include = FALSE}
+library(xaringanthemer)
+mono_light(
+  base_color = "midnightblue",
+  header_font_google = google_font("Josefin Sans"),
+  text_font_google   = google_font("Montserrat", "300", "300i"),
+  code_font_google   = google_font("Droid Mono"),
+  link_color = "deepskyblue1",
+  text_font_size = "28px"
+)
+```
+
+# Overview
+
+- Our course
+- How we did it
+- Outcomes
+
+---
+
+class: center, middle
+# How do you deliver actionable analytics in healthcare?
+
+---
+# Build to a Final Presentation
+
+- Execute a pilot study of a metric (LACE)
+- Assess its effectiveness in a patient population
+- Report the next steps to executive team
+
+---
+# Getting There
+
+Two focuses on this course:
+
+- Organizational Aspects
+	- Lessons learned from Kaiser Permanente Insight Analysts
+- Data Science (R)
+	- ETL (SQL/tidyverse)
+	- Predictive Modeling (broom/tidymodels)
+
+---
+# Lower the Barrier
+
+- Start with RStudio.cloud
+- Content is delivered as RStudio Projects 
+- Students submit their assignments as knitted Rmarkdown   
+- Provide lots of opportunities to ask for help
+
+---
+# The Predictive Problem
+
+  - Predict 30 day readmissions in a simulated patient cohort
+  - Use a validated metric (LACE) on the dataset
+  - Communicate its effectiveness in a patient population
+
+---
+# The Data
+
+- Simulated Data Warehouse
+- 4 Month Extract of patients
+- Based on real clinical data
+
+---
+# Data Science Skills Learned
+
+- Exploratory Data Analysis
+- SQL Queries
+- Visualization
+- Predictive Modeling 
+	- Logistic Regression
+- Communicating Results
+	- ROC curves
+	- Interpreting models
+
+---
+# Challenges: Very Different Backgrounds
+
+- Bioinformatics and Clinical
+- Use diversity: pair them up!
+
+---
+# Challenges: Getting People used to R/Pacing
+
+- [Ready for R]()
+- Have fail-safes
+
+---
+class: center, middle
+# Presentation Examples
+
+---
+  <img class="fragment" src="image/watanabe-meenakashi.png" width="800">
+  
+---
+  <img class="fragment" src="image/brenner-goueth-poire.png" width="800">
+  
+---
+  <img class="fragment" src="image/nguyen-yaeger-wang.png" width="800">
+
+---
+  <img src="image/grout-lin-xu.png" width = 800>
+
+---
+class: center, middle
+
+# Student Testimonies
+---
+# Themes: Collaboration
+
+> Taking the Data Analytics course made me a much more patient and effective collaborator, especially when working with colleagues outside of science. - Kristen Stevens
+
+---
+# Themes: Diversity
+
+> I highly recommend this course to anyone who wishes to get a comprehensive introduction to R and the field of data analytics. The course attracts [a] very diverse set of students. The hybrid nature of the course was ideal to get to meet and network with others. - Meenakashi Mishra
+
+---
+# Themes: Soup to Nuts
+
+> I would definitely recommend this to anyone who is interested in working with data in a healthcare setting, whether you’re a clinician/researcher who will be gathering and using the data, or a manager who might be presenting the data or incorporating analytics into your organization’s workflow. - Pierrette Lo
+
+---
+# We won an award!
+
+2020 Sakai Torchbearer Award
+
+> Nominations praised the careful curriculum, responsive and available instructors (including those drawn from outside of OHSU), meticulously planned projects, and the use of R notebooks and RStudio, resulting in essential research
+skills “not only in bioinformatics/computer science, but generally across biology and medicine.” 
+
+> Lastly, nominators said that Dr. Laderas offers generous feedback and considerable time to supporting learners with these projects through multiple technical modalities.
+
+---
+# What's Next
+
+- Deliver as class to Kaiser Permanente International
+- 
