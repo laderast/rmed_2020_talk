@@ -5,11 +5,23 @@
     <meta charset="utf-8" />
     <meta name="author" content="Ted Laderas, Oregon Health &amp; Science University" />
     <meta name="author" content="Brian Sikora, Kaiser Permanente Insight" />
-    <meta name="date" content="2020-08-18" />
+    <meta name="date" content="2020-08-21" />
+    <link href="libs/tile-view/tile-view.css" rel="stylesheet" />
+    <script src="libs/tile-view/tile-view.js"></script>
+    <link href="libs/animate.css/animate.xaringan.css" rel="stylesheet" />
+    <link href="libs/tachyons/tachyons.min.css" rel="stylesheet" />
+    <link href="libs/panelset/panelset.css" rel="stylesheet" />
+    <script src="libs/panelset/panelset.js"></script>
     <link rel="stylesheet" href="xaringan-themer.css" type="text/css" />
   </head>
   <body>
     <textarea id="source">
+
+
+
+
+
+
 
 
 
@@ -136,6 +148,28 @@ Combine in Final Presentation
 &lt;img src="image/sql.png" width="400"&gt;
 ]
 ---
+.panelset[
+.panel[.panel-name[EDA]
+
+&lt;img src="image/visdat.png" width="889" /&gt;
+]
+
+.panel[.panel-name[SQL]
+&lt;img src="image/sql.png" width="1229" /&gt;
+]
+
+.panel[.panel-name[Predictive Modeling]
+
+```r
+knitr::include_graphics("image/roc-curve.png")
+```
+
+&lt;img src="image/roc-curve.png" width="1473" /&gt;
+]
+
+]
+
+---
 # Challenges: Very Different Backgrounds
 
 - Bioinformatics/Clinical students
@@ -153,7 +187,7 @@ Combine in Final Presentation
 # Challenges: There is no right answer
 
 - Only more defensible ones
-- Don't provide answer key for analysis
+- Get students to document
 
 ---
 class: center, middle
@@ -193,7 +227,7 @@ class: center, middle
 ---
 # We won an award!
 
-2020 Sakai Torchbearer Award
+## 2020 Sakai Torchbearer Award
 
 &gt; Nominations praised the careful curriculum, **responsive and available instructors** (including those drawn from outside of OHSU), **meticulously planned projects**, and the use of R notebooks and RStudio, resulting in **essential research skills** “not only in bioinformatics/computer science, but generally across biology and medicine.” 
 
