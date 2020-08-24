@@ -289,8 +289,9 @@ knitr::include_graphics("image/ml.png")
 # Final Presentation
 
 .pull-left[
-- Present modeling results to an Executive Team
-- What is in the Data?
+- Present to an Executive Team as Pilot Project
+- Impact of not changing
+- High Level / Presenting your results
 - Having an Ask/Call to Action
 ]
 
