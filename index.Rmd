@@ -66,6 +66,8 @@ class: center, middle
 ---
 # Overview
 
+6 Years of Data Analytics
+
 - Introduction
 - Our course
 - Outcomes
@@ -76,7 +78,6 @@ class: center, middle
 ---
 # Introduction
 
-
 .pull-left[
 ```{r out.width = "60%"}
 knitr::include_graphics("image/ted.jpg")
@@ -84,12 +85,11 @@ knitr::include_graphics("image/ted.jpg")
 ]
 
 .pull-right[
-
-- Ted Laderas, Assistant Professor
+- Ted Laderas, Assistant Professor, Medical Informatics and Clinical Epidemiology
 - Bioinformatician / Collaborator
 - RStudio Certified Instructor
-- [Ready for R](https://ready4r.netlify.app)
-
+  - [Ready for R](https://ready4r.netlify.app)
+  - [R-Bootcamp](https://r-bootcamp.netlify.app)
 ]
 
 ---
@@ -198,7 +198,7 @@ We do our best to assess student performance and identify any difficulties with 
 Clinicians tend to be hard on themselves.
 
 ---
-# Point of care help
+# Help when you need it
 
 .pull-left[
 .moon-gray[
@@ -223,7 +223,7 @@ Clinicians tend to be hard on themselves.
 # The Predictive Problem
 
 .pull-left[
-- Predict 30 day readmissions in a simulated patient cohort
+- Predict 30 day readmissions in a simulated hospital patient cohort
 - Use a validated metric (LACE) on the dataset
 - Communicate its effectiveness in a patient population
 ]
@@ -283,6 +283,17 @@ knitr::include_graphics("image/ml.png")
 ]
 
 ---
+# Final Presentation
+
+.pull-left[
+- Present modeling results to an Executive Team
+- What is in the Data?
+- Having an Ask/Call to Action
+]
+
+
+
+---
 class: center, middle
 # Presentation Examples
 
@@ -314,8 +325,18 @@ knitr::include_graphics("image/Lo-mitchell.png")
 Pierrette Lo/Mitchell Strauss
 ]
 
-
 .panel[.panel-name[4]
+
+```{r echo=FALSE, out.width="60%"}
+knitr::include_graphics("image/slater-hickerson.png")
+```
+
+Dan Slater/Laura Hickerson
+]
+
+
+
+.panel[.panel-name[5]
 
 ```{r echo=FALSE, out.width="60%"}
 knitr::include_graphics("image/nguyen-yaeger-wang.png")
@@ -324,7 +345,7 @@ knitr::include_graphics("image/nguyen-yaeger-wang.png")
 Justine Nguyen/Dan Yaeger/Xiao Wang
 ]
 
-.panel[.panel-name[5]
+.panel[.panel-name[6]
 ```{r echo=FALSE, out.width="70%"}
 knitr::include_graphics("image/grout-lin-xu.png")
 ```
