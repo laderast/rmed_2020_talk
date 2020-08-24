@@ -45,7 +45,7 @@
   --text-color: #11114E;
   --header-color: midnightblue;
   --background-color: #E8E8F0;
-  --link-color: deepskyblue1;
+  --link-color: steelblue;
   --text-bold-color: midnightblue;
   --code-highlight-color: rgba(255,255,0,0.5);
   --inverse-text-color: #E8E8F0;
@@ -114,7 +114,7 @@ a, a > code {
   position: absolute;
   bottom: 60px;
   padding-right: 4em;
-  font-size: 0.9em;
+  font-size: 20px;
 }
 .remark-code-line-highlighted {
   background-color: var(--code-highlight-color);

@@ -24,7 +24,6 @@ options(htmltools.dir.version = FALSE)
 knitr::opts_chunk$set(fig.retina = 3, warning = FALSE, message = FALSE, echo=FALSE, out.width = "85%")
 ```
 
-
 ```{r xaringan-themer, include = FALSE}
 library(xaringanthemer)
 style_mono_light(
@@ -32,45 +31,47 @@ style_mono_light(
   header_font_google = google_font("Josefin Sans"),
   text_font_google   = google_font("Montserrat", "300", "300i"),
   code_font_google   = google_font("Droid Mono"),
-  link_color = "deepskyblue1",
-  text_font_size = "28px"
+  link_color = "steelblue",
+  text_font_size = "28px",footnote_font_size = "22px",
 )
 ```
 
-```{css eval=FALSE}
-```
-
-
 ```{r xaringanExtra, echo=FALSE}
 xaringanExtra::use_xaringan_extra(c("tile_view", "logo", "tachyons"))
-```
-
-```{r xaringan-panelset, echo=FALSE}
 xaringanExtra::use_panelset()
 xaringanExtra::use_tachyons()
 ```
 
-class: center, middle
+class: center, middle, inverse
 # The MD in .Rmd
 ### Teaching Clinicians Data Analytics in R
 ### R/Medicine 2020
 
-.large[**Ted Laderas** (`r icon::fa("envelope")`laderast@ohsu.edu | [`r icon::fa("twitter")`](https://twitter.com/tladeras) [tladeras](https://twitter.com/tladeras)) | Oregon Health & Science University | 
-]
+.b[Ted Laderas] <br>
+Oregon Health & Science University <br>
+(`r icon::fa("envelope")`laderast@ohsu.edu | [`r icon::fa("twitter")`](https://twitter.com/tladeras) [tladeras](https://twitter.com/tladeras))
 
-.large[**Brian Sikora** | Kaiser Permanente Insight ]
+
+.b[Brian Sikora]<br>
+Kaiser Permanente Insight 
 
 ### Slides: [`r icon::fa("link")`](https://bit.ly/bmi569-rmed) https://bit.ly/bmi569-rmed
-
 
 ---
 # Overview
 
-6 Years of Data Analytics
+.pull-left[
+6 Years of Data Analytics Course
 
 - Introduction
 - Our course
 - Outcomes
+]
+.pull-right[
+```{r, out.width="100%"}
+knitr::include_graphics("image/class.jpg")
+```
+]
 
 .footnote[
 [`r icon::fa("link")`](https://bit.ly/bmi569-rmed) https://bit.ly/bmi569-rmed
@@ -93,8 +94,7 @@ knitr::include_graphics("image/ted.jpg")
 ]
 
 ---
-
-class: center, middle
+class: center, middle, inverse
 # How do you deliver actionable analytics in healthcare?
 
 ---
@@ -115,9 +115,7 @@ Combine in Final Presentation
 ```
 ]
 
-.footnote[
-[`r icon::fa("link")`](https://bit.ly/bmi569-rmed) https://bit.ly/bmi569-rmed
-]
+.footnote[[`r icon::fa("link")`](https://bit.ly/bmi569-rmed) https://bit.ly/bmi569-rmed]
 
 ???
 
@@ -152,7 +150,7 @@ knitr::include_graphics("image/mindy.gif")
 .moon-gray[
 Mary is a clinician who wants to understand how analytics can be delivered in her healthcare organization]
 
-- Has little time
+- .b[Has little time]
 
 .moon-gray[
 - Likes learning on her own
@@ -176,7 +174,7 @@ Mary is a clinician who wants to understand how analytics can be delivered in he
 Mary is a clinician who wants to understand how analytics can be delivered in her healthcare organization
 - Has little time]
 
-- Likes learning on her own
+- .b[Likes learning on her own]
 
 .moon-gray[
 - Has a hard time asking for help, hard on herself]
@@ -206,10 +204,11 @@ Clinicians tend to be hard on themselves.
 - Has little time
 - Likes learning on her own
 ]
-- Has a hard time asking for help, hard on herself]
+- .b[Has a hard time asking for help, hard on herself]
 ]
 
 .pull-right[.bg-washed-green.b--dark-green.ba.bw2.br3.shadow-5.ph4.mt5[
+- Team-ups
 - Slack for quick questions
 - Office Hours
 - Scheduled Appointments]
@@ -247,6 +246,10 @@ knitr::include_graphics("image/lace.jpg")
 knitr::include_graphics("image/data_warehouse.jpg")
 ```
 ]
+---
+class: center, middle, inverse
+
+# Assignments
 ---
 .panelset[
 .panel[.panel-name[EDA]
@@ -291,11 +294,16 @@ knitr::include_graphics("image/ml.png")
 - Having an Ask/Call to Action
 ]
 
+.pull-right[
+```{r out.width="85%"}
+knitr::include_graphics("image/boss2.gif")
+```
+]
 
 
 ---
-class: center, middle
-# Presentation Examples
+class: center, middle, inverse
+# Outcomes: Presentation Examples
 
 ---
 .panelset[
@@ -356,9 +364,9 @@ Megan Grout/Wei-Chun Lin/Colleen Xu
 ]
 
 ---
-class: center, middle
+class: center, middle, inverse
 
-# Student Testimonies
+# Outcomes: Student Testimonies
 ---
 # Themes: Collaboration
 
@@ -406,24 +414,27 @@ Lastly, nominators said that Dr. Laderas offers generous feedback and considerab
 - Apply that knowledge
 
 ---
+background-image: url("image/class.jpg")
+
 ## Thank You/Questions?
 
 .pull-left[
-.small[
-- OHSU/DMICE
+.bg-light-blue.b--dark-blue.ba.bw2.br3.shadow-5.ph4.mt5.o-85.f5[
+- .b[OHSU/DMICE]
   - David Dorr
   - Shannon McWeeney
   - Tracy Edinger
   - Virginia Lankes
   - Mark Klick
   - Aaron Coyner
-]
-Slides done with `xaringan` and `xaringanExtra`
-]
 
-.pull-left[
-.small[
-- KP Insight Team
+Slides: [`r icon::fa("link")`](https://bit.ly/bmi569-rmed) https://bit.ly/bmi569-rmed 
+
+Done with `xaringan` and `xaringanExtra`]]
+
+.pull-right[
+.bg-light-blue.b--dark-blue.ba.bw2.br3.shadow-5.ph4.mt5.o-85.f5[
+- .b[KP Insight Team]
   - Delilah Moore
   - Eric Johnson
   - Allison Schmidt
@@ -437,6 +448,4 @@ Slides done with `xaringan` and `xaringanExtra`
   ]
 ]
 
-.footnote[
-[`r icon::fa("link")`](https://bit.ly/bmi569-rmed) https://bit.ly/bmi569-rmed
-]
+
