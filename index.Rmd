@@ -422,7 +422,7 @@ background-image: url("image/class.jpg")
 
 .pull-left[
 .bg-light-blue.b--dark-blue.ba.bw2.br3.shadow-5.ph4.mt5.o-85.f5[
-- .b[OHSU/DMICE]
+.b[OHSU/DMICE]
   - David Dorr
   - Shannon McWeeney
   - Tracy Edinger
@@ -436,11 +436,11 @@ Done with `xaringan` and `xaringanExtra`]]
 
 .pull-right[
 .bg-light-blue.b--dark-blue.ba.bw2.br3.shadow-5.ph4.mt5.o-85.f5[
-- .b[Kaiser Permanente]
+.b[Kaiser Permanente]
   - Delilah Moore
   - Eric Johnson
   - Allison Schmidt
-  - Michele Schmidt
+  - Michelle Schmidt
   - Chris Guy
   - Bryan Simmons
   - Erin Dirks
