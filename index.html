@@ -5,13 +5,14 @@
     <meta charset="utf-8" />
     <meta name="author" content="Ted Laderas, Oregon Health &amp; Science University" />
     <meta name="author" content="Brian Sikora, Kaiser Permanente Insight" />
-    <meta name="date" content="2020-08-21" />
+    <meta name="date" content="2020-08-24" />
     <link href="libs/tile-view/tile-view.css" rel="stylesheet" />
     <script src="libs/tile-view/tile-view.js"></script>
     <link href="libs/animate.css/animate.xaringan.css" rel="stylesheet" />
     <link href="libs/tachyons/tachyons.min.css" rel="stylesheet" />
     <link href="libs/panelset/panelset.css" rel="stylesheet" />
     <script src="libs/panelset/panelset.js"></script>
+    <link href="libs/font-awesome/css/fontawesome-all.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="xaringan-themer.css" type="text/css" />
   </head>
   <body>
@@ -27,18 +28,21 @@
 
 
 
+
+
+
 class: center, middle
 # The MD in .Rmd
 ## Teaching Clinicians Data Analytics in R
-
-### Ted Laderas (laderast@ohsu.edu)
-#### Oregon Health &amp; Science University
-
-### Brian Sikora
-#### Kaiser Permanente Insight
-
 ### R/Medicine 2020
-#### Slides: http://bit.ly/bmi569-rmed
+
+.large[**Ted Laderas** (laderast@ohsu.edu) | Oregon Health &amp; Science University ]
+
+.large[**Brian Sikora** | Kaiser Permanente Insight ]
+
+[<i class="fas  fa-link "></i>](http://bit.ly/bmi569-rmed) http://bit.ly/bmi569-rmed
+
+[<i class="fab  fa-twitter "></i>](https://twitter.com/tladeras) [tladeras](https://twitter.com/tladeras)
 
 ---
 # Overview
@@ -48,6 +52,9 @@ class: center, middle
 - How we did it
 - Outcomes
 
+.footnote[
+[<i class="fas  fa-link "></i>](http://bit.ly/bmi569-rmed) http://bit.ly/bmi569-rmed
+]
 ---
 # Introduction
 
@@ -63,13 +70,17 @@ class: center, middle
 
 ]
 
+.footnote[
+[<i class="fas  fa-link "></i>](http://bit.ly/bmi569-rmed) http://bit.ly/bmi569-rmed
+]
+
 ---
 
 class: center, middle
 # How do you deliver actionable analytics in healthcare?
 
 ---
-# Getting There
+# Simulating Analytics 
 
 .pull-left[
 Two focuses on this course:
@@ -81,7 +92,11 @@ Combine in Final Presentation
 ]
 
 .pull-right[
-&lt;img src="image/two_branches.jpg" width="2731" /&gt;
+&lt;img src="image/two_branches.jpg" width="85%" /&gt;
+]
+
+.footnote[
+[<i class="fas  fa-link "></i>](http://bit.ly/bmi569-rmed) http://bit.ly/bmi569-rmed
 ]
 
 ???
@@ -91,16 +106,91 @@ Combine in Final Presentation
 - Report the next steps to executive team
 
 ---
-# Lower the Barrier
+# Learner Persona
 
 .pull-left[
-- RStudio.cloud
-- RStudio Projects 
-- Rmarkdown Assignments  
+- Mary is a clinician who wants to understand how analytics can be delivered in her healthcare organization
+  - Has little time
+  - Likes learning on her own
+  - Has a hard time asking for help, hard on herself
+]
+
+.footnote[
+[<i class="fas  fa-link "></i>](http://bit.ly/bmi569-rmed) http://bit.ly/bmi569-rmed
+]
+
+---
+# No Time
+
+.pull-left[
+.moon-gray[
+Mary is a clinician who wants to understand how analytics can be delivered in her healthcare organization]
+
+- Has little time
+
+.moon-gray[
+- Likes learning on her own
+- Has a hard time asking for help, hard on herself]
 ]
 
 .pull-right[
-&lt;img src="image/rstudio-cloud.png" width="1307" /&gt;
+- "Just in Time" instruction
+- Assignments gradually increase in difficulty
+]
+
+.footnote[
+[<i class="fas  fa-link "></i>](http://bit.ly/bmi569-rmed) http://bit.ly/bmi569-rmed
+]
+
+---
+# Self Learning
+
+.pull-left[
+.moon-gray[
+Mary is a clinician who wants to understand how analytics can be delivered in her healthcare organization
+- Has little time]
+
+- Likes learning on her own
+
+.moon-gray[
+- Has a hard time asking for help, hard on herself]
+]
+
+.pull-right[
+- RStudio.cloud
+- RStudio Projects 
+- Rmarkdown Assignments 
+
+&lt;img src="image/rstudio-cloud.png" width="60%" /&gt;
+]
+
+???
+
+Assignments are delivered as projects in RStudio Cloud within the Data Analytics Workspace.
+
+We do our best to assess student performance and identify any difficulties with students. 
+
+Clinicians tend to be hard on themselves.
+
+---
+# Point of care help
+
+.pull-left[
+.moon-gray[
+- Mary is a clinician who wants to understand how analytics can be delivered in her healthcare organization
+- Has little time
+- Likes learning on her own
+]
+- Has a hard time asking for help, hard on herself]
+]
+
+.pull-right[
+- Use Slack for quick questions
+- Office Hours/Scheduled Appointments
+]
+
+.footnote[
+[<i class="fas  fa-link "></i>](http://bit.ly/bmi569-rmed) http://bit.ly/bmi569-rmed
 ]
 
 ---
@@ -113,9 +203,8 @@ Combine in Final Presentation
 ]
 
 .pull-right[
-&lt;img src="image/lace.jpg" width="2731" /&gt;
+&lt;img src="image/lace.jpg" width="85%" /&gt;
 ]
-
 ---
 # The Data
 
@@ -126,84 +215,60 @@ Combine in Final Presentation
 ]
 
 .pull-right[
-&lt;img src="image/data_warehouse.jpg" width="2731" /&gt;
-]
-
----
-# Data Science Skills Learned
-
-.pull-left[
-- Exploratory Data Analysis
-- SQL Queries
-- Visualization
-- Predictive Modeling 
-	- Logistic Regression
-- Communicating Results
-	- ROC curves
-	- Interpreting models
-]
-
-.pull-right[
-
-&lt;img src="image/sql.png" width="400"&gt;
+&lt;img src="image/data_warehouse.jpg" width="85%" /&gt;
 ]
 ---
 .panelset[
 .panel[.panel-name[EDA]
 
-&lt;img src="image/visdat.png" width="889" /&gt;
+&lt;img src="image/visdat.png" width="85%" /&gt;
 ]
 
 .panel[.panel-name[SQL]
-&lt;img src="image/sql.png" width="1229" /&gt;
+&lt;img src="image/sql.png" width="85%" /&gt;
+]
+
+.panel[.panel-name[SQL2]
+&lt;img src="image/sql2.png" width="85%" /&gt;
 ]
 
 .panel[.panel-name[Predictive Modeling]
+&lt;img src="image/roc-curve.png" width="85%" /&gt;
+]
 
-```r
-knitr::include_graphics("image/roc-curve.png")
-```
-
-&lt;img src="image/roc-curve.png" width="1473" /&gt;
+.panel[.panel-name[Machine Learning]
+&lt;img src="image/ml.png" width="85%" /&gt;
 ]
 
 ]
-
----
-# Challenges: Very Different Backgrounds
-
-- Bioinformatics/Clinical students
-- Pair them up and have them teach each other
-
----
-# Challenges: Getting People used to R/Pacing
-
-- [Ready for R]()
-- Have fail-safes
-- Office Hours
-- Slack
-
----
-# Challenges: There is no right answer
-
-- Only more defensible ones
-- Get students to document
 
 ---
 class: center, middle
 # Presentation Examples
 
 ---
-  &lt;img class="fragment" src="image/watanabe-meenakashi.png" width="800" alt="Meenakashi Mishra and Kevin Watanabe-Smith"&gt;
-  
----
-  &lt;img class="fragment" src="image/brenner-goueth-poire.png" width="800" alt="Ariella Brenner, Rose Goueth, Alfonso Poire"&gt;
-  
----
-  &lt;img class="fragment" src="image/nguyen-yaeger-wang.png" width="800" alt="Justine Nguyen, Daniel Yaeger, Xiao Wang"&gt;
+.panelset[
+.panel[.panel-name[1]
 
----
-  &lt;img src="image/grout-lin-xu.png" width = 800 alt="Megan Grout, Wei-Chun Lin, Colleen Xu"&gt;
+&lt;img src="image/watanabe-meenakashi.png" width="70%" /&gt;
+]
+
+.panel[.panel-name[2]
+&lt;img src="image/brenner-goueth-poire.png" width="70%" /&gt;
+]
+
+.panel[.panel-name[3]
+
+&lt;img src="image/nguyen-yaeger-wang.png" width="70%" /&gt;
+]
+
+.panel[.panel-name[4]
+
+&lt;img src="image/grout-lin-xu.png" width="70%" /&gt;
+]
+
+
+]
 
 ---
 class: center, middle
@@ -212,17 +277,32 @@ class: center, middle
 ---
 # Themes: Collaboration
 
-&gt; Taking the Data Analytics course made me a **much more patient and effective collaborator**, especially when working with colleagues outside of science. - Kristen Stevens
+.bg-washed-green.b--dark-green.ba.bw2.br3.shadow-5.ph4.mt5[
+Taking the Data Analytics course made me a **much more patient and effective collaborator**, especially when working with colleagues outside of science.
+
+.tr[
+— Kristen Stevens, MD/PhD Candidate
+]]
 
 ---
 # Themes: Diversity
 
-&gt; I highly recommend this course to anyone who wishes to get a comprehensive introduction to R and the field of data analytics. **The course attracts [a] very diverse set of students.** The hybrid nature of the course was ideal to get to meet and network with others. - Meenakashi Mishra
+
+.bg-washed-green.b--dark-green.ba.bw2.br3.shadow-5.ph4.mt5[I highly recommend this course to anyone who wishes to get a comprehensive introduction to R and the field of data analytics. **The course attracts [a] very diverse set of students.** The hybrid nature of the course was ideal to get to meet and network with others.
+
+
+.tr[
+— Meenakashi Mishra, Clinical Informatics Fellow
+]]
 
 ---
 # Themes: Soup to Nuts
 
-&gt; I would definitely recommend this to **anyone who is interested in working with data in a healthcare setting**, whether you’re a clinician/researcher who will be gathering and using the data, or a manager who might be presenting the data or incorporating analytics into your organization’s workflow. - Pierrette Lo
+.bg-washed-green.b--dark-green.ba.bw2.br3.shadow-5.ph4.mt5[I would definitely recommend this to **anyone who is interested in working with data in a healthcare setting**, whether you’re a clinician/researcher who will be gathering and using the data, or a manager who might be presenting the data or incorporating analytics into your organization’s workflow.
+
+.tr[
+— Pierrette Lo
+]]
 
 ---
 # We won an award!
@@ -236,18 +316,14 @@ class: center, middle
 ---
 # Conclusions
 
-- 
-
-
----
-# What's Next
-
-- Deliver as class to Kaiser Permanente International
+- Melding practical and organizational skills 
+- Talk about real life lessons
 
 ---
-# Thank You
+## Thank You
 
 .pull-left[
+.small[
 - OHSU
   - David Dorr
   - Shannon McWeeney
@@ -255,12 +331,14 @@ class: center, middle
   - Virginia Lankes
   - Mark Klick
   - Aaron Coyner
-
+]
+Slides done with `xaringan` and `xaringanExtra`
 ]
 
 .pull-left[
+.small[
 - KP Insight Team
-  - Delilah Moore
+  - Delilah Moores
   - Eric Johnson
   - Allison Schmidt
   - Michele Schmidt
@@ -270,6 +348,7 @@ class: center, middle
   - Yvonne Rice
   - Vivian Tan
   - Karen Schartman
+  ]
 ]
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
