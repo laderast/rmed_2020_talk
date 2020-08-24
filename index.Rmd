@@ -60,7 +60,7 @@ class: center, middle
 
 .large[**Brian Sikora** | Kaiser Permanente Insight ]
 
-### Slides: [`r icon::fa("link")`](http://bit.ly/bmi569-rmed) http://bit.ly/bmi569-rmed
+### Slides: [`r icon::fa("link")`](https://bit.ly/bmi569-rmed) https://bit.ly/bmi569-rmed
 
 
 ---
@@ -73,7 +73,7 @@ class: center, middle
 - Outcomes
 
 .footnote[
-[`r icon::fa("link")`](http://bit.ly/bmi569-rmed) http://bit.ly/bmi569-rmed
+[`r icon::fa("link")`](https://bit.ly/bmi569-rmed) https://bit.ly/bmi569-rmed
 ]
 ---
 # Introduction
@@ -116,7 +116,7 @@ Combine in Final Presentation
 ]
 
 .footnote[
-[`r icon::fa("link")`](http://bit.ly/bmi569-rmed) http://bit.ly/bmi569-rmed
+[`r icon::fa("link")`](https://bit.ly/bmi569-rmed) https://bit.ly/bmi569-rmed
 ]
 
 ???
@@ -142,7 +142,7 @@ knitr::include_graphics("image/mindy.gif")
 ]
 
 .footnote[
-[`r icon::fa("link")`](http://bit.ly/bmi569-rmed) http://bit.ly/bmi569-rmed
+[`r icon::fa("link")`](https://bit.ly/bmi569-rmed) https://bit.ly/bmi569-rmed
 ]
 
 ---
@@ -165,7 +165,7 @@ Mary is a clinician who wants to understand how analytics can be delivered in he
 ]
 
 .footnote[
-[`r icon::fa("link")`](http://bit.ly/bmi569-rmed) http://bit.ly/bmi569-rmed
+[`r icon::fa("link")`](https://bit.ly/bmi569-rmed) https://bit.ly/bmi569-rmed
 ]
 
 ---
@@ -216,7 +216,7 @@ Clinicians tend to be hard on themselves.
 ]
 
 .footnote[
-[`r icon::fa("link")`](http://bit.ly/bmi569-rmed) http://bit.ly/bmi569-rmed
+[`r icon::fa("link")`](https://bit.ly/bmi569-rmed) https://bit.ly/bmi569-rmed
 ]
 
 ---
@@ -393,9 +393,10 @@ Taking the Data Analytics course made me a .b[much more patient and effective co
 
 ## 2020 Sakai Torchbearer Award
 
+.bg-washed-green.b--dark-green.ba.bw2.br3.shadow-5.ph4.mt5[
 Nominations praised the careful curriculum, .b[responsive and available instructors] (including those drawn from outside of OHSU), .b[meticulously planned projects], and the use of R notebooks and RStudio, resulting in .b[essential research skills] “not only in bioinformatics/computer science, but generally across biology and medicine.” 
 
-Lastly, nominators said that Dr. Laderas offers generous feedback and considerable time to supporting learners with these projects through multiple technical modalities.
+Lastly, nominators said that Dr. Laderas offers generous feedback and considerable time to supporting learners with these projects through multiple technical modalities.]
 
 ---
 # Conclusions
@@ -437,5 +438,5 @@ Slides done with `xaringan` and `xaringanExtra`
 ]
 
 .footnote[
-[`r icon::fa("link")`](http://bit.ly/bmi569-rmed) http://bit.ly/bmi569-rmed
+[`r icon::fa("link")`](https://bit.ly/bmi569-rmed) https://bit.ly/bmi569-rmed
 ]
