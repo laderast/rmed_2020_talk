@@ -32,7 +32,8 @@ style_mono_light(
   text_font_google   = google_font("Montserrat", "300", "300i"),
   code_font_google   = google_font("Droid Mono"),
   link_color = "steelblue",
-  text_font_size = "28px",footnote_font_size = "22px",
+  text_font_size = "28px",
+  footnote_font_size = "22px"
 )
 ```
 
@@ -435,11 +436,12 @@ Done with `xaringan` and `xaringanExtra`]]
 
 .pull-right[
 .bg-light-blue.b--dark-blue.ba.bw2.br3.shadow-5.ph4.mt5.o-85.f5[
-- .b[KP Insight Team]
+- .b[Kaiser Permanente]
   - Delilah Moore
   - Eric Johnson
   - Allison Schmidt
   - Michele Schmidt
+  - Chris Guy
   - Bryan Simmons
   - Erin Dirks
   - Chris Lattig
