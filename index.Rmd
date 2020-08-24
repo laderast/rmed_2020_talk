@@ -42,7 +42,7 @@ style_mono_light(
 
 
 ```{r xaringanExtra, echo=FALSE}
-xaringanExtra::use_xaringan_extra(c("tile_view", "animate_css", "logo", "tachyons"))
+xaringanExtra::use_xaringan_extra(c("tile_view", "logo", "tachyons"))
 ```
 
 ```{r xaringan-panelset, echo=FALSE}
@@ -52,16 +52,16 @@ xaringanExtra::use_tachyons()
 
 class: center, middle
 # The MD in .Rmd
-## Teaching Clinicians Data Analytics in R
+### Teaching Clinicians Data Analytics in R
 ### R/Medicine 2020
 
-.large[**Ted Laderas** (laderast@ohsu.edu) | Oregon Health & Science University ]
+.large[**Ted Laderas** (laderast@ohsu.edu) | Oregon Health & Science University | [`r icon::fa("twitter")`](https://twitter.com/tladeras) [tladeras](https://twitter.com/tladeras)
+]
 
 .large[**Brian Sikora** | Kaiser Permanente Insight ]
 
 [`r icon::fa("link")`](http://bit.ly/bmi569-rmed) http://bit.ly/bmi569-rmed
 
-[`r icon::fa("twitter")`](https://twitter.com/tladeras) [tladeras](https://twitter.com/tladeras)
 
 ---
 # Overview
@@ -136,6 +136,13 @@ Combine in Final Presentation
   - Has a hard time asking for help, hard on herself
 ]
 
+.pull-right[
+```{r}
+knitr::include_graphics("image/mindy.gif")
+```
+
+]
+
 .footnote[
 [`r icon::fa("link")`](http://bit.ly/bmi569-rmed) http://bit.ly/bmi569-rmed
 ]
@@ -154,9 +161,9 @@ Mary is a clinician who wants to understand how analytics can be delivered in he
 - Has a hard time asking for help, hard on herself]
 ]
 
-.pull-right[
+.pull-right[ .bg-washed-green.b--dark-green.ba.bw2.br3.shadow-5.ph4.mt5[
 - "Just in Time" instruction
-- Assignments gradually increase in difficulty
+- Assignments gradually increase in difficulty]
 ]
 
 .footnote[
@@ -177,14 +184,11 @@ Mary is a clinician who wants to understand how analytics can be delivered in he
 - Has a hard time asking for help, hard on herself]
 ]
 
-.pull-right[
+.pull-right[.bg-washed-green.b--dark-green.ba.bw2.br3.shadow-5.ph4.mt5[
 - RStudio.cloud
 - RStudio Projects 
-- Rmarkdown Assignments 
-
-```{r echo=FALSE, out.width = "60%"}
-knitr::include_graphics("image/rstudio-cloud.png")
-```
+- Rmarkdown Assignments
+]
 ]
 
 ???
@@ -207,9 +211,10 @@ Clinicians tend to be hard on themselves.
 - Has a hard time asking for help, hard on herself]
 ]
 
-.pull-right[
-- Use Slack for quick questions
-- Office Hours/Scheduled Appointments
+.pull-right[.bg-washed-green.b--dark-green.ba.bw2.br3.shadow-5.ph4.mt5[
+- Slack for quick questions
+- Office Hours
+- Scheduled Appointments]
 ]
 
 .footnote[
@@ -248,31 +253,31 @@ knitr::include_graphics("image/data_warehouse.jpg")
 .panelset[
 .panel[.panel-name[EDA]
 
-```{r panel-chunk, echo=FALSE}
+```{r panel-chunk, echo=FALSE, out.width = "65%"}
 knitr::include_graphics("image/visdat.png")
 ```
 ]
 
 .panel[.panel-name[SQL]
-```{r echo=FALSE}
+```{r echo=FALSE, out.width = "85%"}
 knitr::include_graphics("image/sql.png")
 ```
 ]
 
 .panel[.panel-name[SQL2]
-```{r}
+```{r echo=FALSE, out.width = "90%"}
 knitr::include_graphics("image/sql2.png")
 ```
 ]
 
 .panel[.panel-name[Predictive Modeling]
-```{r}
+```{r, echo=FALSE, out.width="70%"}
 knitr::include_graphics("image/roc-curve.png")
 ```
 ]
 
 .panel[.panel-name[Machine Learning]
-```{r}
+```{r, echo=FALSE, out.width="70%"}
 knitr::include_graphics("image/ml.png")
 ```
 ]
@@ -323,7 +328,7 @@ class: center, middle
 # Themes: Collaboration
 
 .bg-washed-green.b--dark-green.ba.bw2.br3.shadow-5.ph4.mt5[
-Taking the Data Analytics course made me a **much more patient and effective collaborator**, especially when working with colleagues outside of science.
+Taking the Data Analytics course made me a .b[much more patient and effective collaborator], especially when working with colleagues outside of science.
 
 .tr[
 — Kristen Stevens, MD/PhD Candidate
@@ -333,7 +338,7 @@ Taking the Data Analytics course made me a **much more patient and effective col
 # Themes: Diversity
 
 
-.bg-washed-green.b--dark-green.ba.bw2.br3.shadow-5.ph4.mt5[I highly recommend this course to anyone who wishes to get a comprehensive introduction to R and the field of data analytics. **The course attracts [a] very diverse set of students.** The hybrid nature of the course was ideal to get to meet and network with others.
+.bg-washed-green.b--dark-green.ba.bw2.br3.shadow-5.ph4.mt5[I highly recommend this course to anyone who wishes to get a comprehensive introduction to R and the field of data analytics. .b[The course attracts [a] very diverse set of students.] The hybrid nature of the course was ideal to get to meet and network with others.
 
 
 .tr[
@@ -343,10 +348,10 @@ Taking the Data Analytics course made me a **much more patient and effective col
 ---
 # Themes: Soup to Nuts
 
-.bg-washed-green.b--dark-green.ba.bw2.br3.shadow-5.ph4.mt5[I would definitely recommend this to **anyone who is interested in working with data in a healthcare setting**, whether you’re a clinician/researcher who will be gathering and using the data, or a manager who might be presenting the data or incorporating analytics into your organization’s workflow.
+.bg-washed-green.b--dark-green.ba.bw2.br3.shadow-5.ph4.mt5[I would definitely recommend this to .b[anyone who is interested in working with data in a healthcare setting], whether you’re a clinician/researcher who will be gathering and using the data, or a manager who might be presenting the data or incorporating analytics into your organization’s workflow.
 
 .tr[
-— Pierrette Lo
+— Pierrette Lo, Relationship Manager/Data Scientist
 ]]
 
 ---
@@ -354,15 +359,16 @@ Taking the Data Analytics course made me a **much more patient and effective col
 
 ## 2020 Sakai Torchbearer Award
 
-> Nominations praised the careful curriculum, **responsive and available instructors** (including those drawn from outside of OHSU), **meticulously planned projects**, and the use of R notebooks and RStudio, resulting in **essential research skills** “not only in bioinformatics/computer science, but generally across biology and medicine.” 
+Nominations praised the careful curriculum, .b[responsive and available instructors] (including those drawn from outside of OHSU), .b[meticulously planned projects], and the use of R notebooks and RStudio, resulting in .b[essential research skills] “not only in bioinformatics/computer science, but generally across biology and medicine.” 
 
-> Lastly, nominators said that Dr. Laderas offers generous feedback and considerable time to supporting learners with these projects through multiple technical modalities.
+Lastly, nominators said that Dr. Laderas offers generous feedback and considerable time to supporting learners with these projects through multiple technical modalities.
 
 ---
 # Conclusions
 
 - Melding practical and organizational skills 
 - Talk about real life lessons
+- Apply that knowledge
 
 ---
 ## Thank You
@@ -383,7 +389,7 @@ Slides done with `xaringan` and `xaringanExtra`
 .pull-left[
 .small[
 - KP Insight Team
-  - Delilah Moores
+  - Delilah Moore
   - Eric Johnson
   - Allison Schmidt
   - Michele Schmidt
@@ -394,4 +400,8 @@ Slides done with `xaringan` and `xaringanExtra`
   - Vivian Tan
   - Karen Schartman
   ]
+]
+
+.footnote[
+[`r icon::fa("link")`](http://bit.ly/bmi569-rmed) http://bit.ly/bmi569-rmed
 ]
