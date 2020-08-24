@@ -55,12 +55,12 @@ class: center, middle
 ### Teaching Clinicians Data Analytics in R
 ### R/Medicine 2020
 
-.large[**Ted Laderas** (laderast@ohsu.edu) | Oregon Health & Science University | [`r icon::fa("twitter")`](https://twitter.com/tladeras) [tladeras](https://twitter.com/tladeras)
+.large[**Ted Laderas** (`r icon::fa("envelope")`laderast@ohsu.edu | [`r icon::fa("twitter")`](https://twitter.com/tladeras) [tladeras](https://twitter.com/tladeras)) | Oregon Health & Science University | 
 ]
 
 .large[**Brian Sikora** | Kaiser Permanente Insight ]
 
-[`r icon::fa("link")`](http://bit.ly/bmi569-rmed) http://bit.ly/bmi569-rmed
+### Slides: [`r icon::fa("link")`](http://bit.ly/bmi569-rmed) http://bit.ly/bmi569-rmed
 
 
 ---
@@ -68,7 +68,6 @@ class: center, middle
 
 - Introduction
 - Our course
-- How we did it
 - Outcomes
 
 .footnote[
@@ -79,18 +78,18 @@ class: center, middle
 
 
 .pull-left[
-- Ted Laderas, Assistant Professor
-- Bioinformatician / Collaborator
-- Ready for R
-- RStudio Certified Instructor
+```{r out.width = "60%"}
+knitr::include_graphics("image/ted.jpg")
+```
 ]
 
 .pull-right[
 
-]
+- Ted Laderas, Assistant Professor
+- Bioinformatician / Collaborator
+- RStudio Certified Instructor
+- [Ready for R](https://ready4r.netlify.app)
 
-.footnote[
-[`r icon::fa("link")`](http://bit.ly/bmi569-rmed) http://bit.ly/bmi569-rmed
 ]
 
 ---
@@ -102,7 +101,7 @@ class: center, middle
 # Simulating Analytics 
 
 .pull-left[
-Two focuses on this course:
+Analytics and Organizations:
 
 - Data Science (R, OHSU)
 - Organizational Aspects (KP Insight)
@@ -130,7 +129,7 @@ Combine in Final Presentation
 # Learner Persona
 
 .pull-left[
-- Mary is a clinician who wants to understand how analytics can be delivered in her healthcare organization
+Mary is a clinician who wants to understand how analytics can be delivered in her healthcare organization
   - Has little time
   - Likes learning on her own
   - Has a hard time asking for help, hard on herself
@@ -140,7 +139,6 @@ Combine in Final Presentation
 ```{r}
 knitr::include_graphics("image/mindy.gif")
 ```
-
 ]
 
 .footnote[
@@ -292,31 +290,47 @@ class: center, middle
 .panelset[
 .panel[.panel-name[1]
 
-```{r echo=FALSE, out.width="70%"}
+```{r echo=FALSE, out.width="60%"}
 knitr::include_graphics("image/watanabe-meenakashi.png")
 ```
+
+Meenakashi Mishra/Kevin Watanabe-Smith 
 ]
 
 .panel[.panel-name[2]
-```{r echo=FALSE, out.width="70%"}
+```{r echo=FALSE, out.width="60%"}
 knitr::include_graphics("image/brenner-goueth-poire.png")
 ```
+
+Arielle Brenner/Rose Goueth/Alfonso Poire
 ]
 
 .panel[.panel-name[3]
 
 ```{r echo=FALSE, out.width="70%"}
-knitr::include_graphics("image/nguyen-yaeger-wang.png")
+knitr::include_graphics("image/Lo-mitchell.png")
 ```
+
+Pierrette Lo/Mitchell Strauss
 ]
+
 
 .panel[.panel-name[4]
 
+```{r echo=FALSE, out.width="60%"}
+knitr::include_graphics("image/nguyen-yaeger-wang.png")
+```
+
+Justine Nguyen/Dan Yaeger/Xiao Wang
+]
+
+.panel[.panel-name[5]
 ```{r echo=FALSE, out.width="70%"}
 knitr::include_graphics("image/grout-lin-xu.png")
 ```
-]
 
+Megan Grout/Wei-Chun Lin/Colleen Xu
+]
 
 ]
 
@@ -336,7 +350,6 @@ Taking the Data Analytics course made me a .b[much more patient and effective co
 
 ---
 # Themes: Diversity
-
 
 .bg-washed-green.b--dark-green.ba.bw2.br3.shadow-5.ph4.mt5[I highly recommend this course to anyone who wishes to get a comprehensive introduction to R and the field of data analytics. .b[The course attracts [a] very diverse set of students.] The hybrid nature of the course was ideal to get to meet and network with others.
 
@@ -371,11 +384,11 @@ Lastly, nominators said that Dr. Laderas offers generous feedback and considerab
 - Apply that knowledge
 
 ---
-## Thank You
+## Thank You/Questions?
 
 .pull-left[
 .small[
-- OHSU
+- OHSU/DMICE
   - David Dorr
   - Shannon McWeeney
   - Tracy Edinger
