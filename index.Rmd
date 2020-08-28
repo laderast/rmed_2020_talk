@@ -1,6 +1,6 @@
 ---
 title: "The MD in .Rmd"
-subtitle: "Teaching Clinicians Data Analytics in R"  
+subtitle: "Teaching Clinicians Data Analytics with R"  
 author: 
   - "Ted Laderas, Oregon Health & Science University"
   - "Brian Sikora, Kaiser Permanente Insight"
@@ -43,14 +43,14 @@ xaringanExtra::use_panelset()
 xaringanExtra::use_tachyons()
 ```
 
-class: center, middle, inverse
+class: middle, inverse
 # The MD in .Rmd
-### Teaching Clinicians Data Analytics in R
+### Teaching Clinicians Data Analytics with R
 ### R/Medicine 2020
 
 .b[Ted Laderas] <br>
 Oregon Health & Science University <br>
-(`r icon::fa("envelope")`laderast@ohsu.edu | [`r icon::fa("twitter")`](https://twitter.com/tladeras) [tladeras](https://twitter.com/tladeras))
+([`r icon::fa("envelope")`](mailto:laderast@ohsu.edu) [laderast@ohsu.edu](mailto:laderast@ohsu.edu) | [`r icon::fa("twitter")`](https://twitter.com/tladeras)  [tladeras](https://twitter.com/tladeras))
 
 
 .b[Brian Sikora]<br>
@@ -188,6 +188,11 @@ Mary is a clinician who wants to understand how analytics can be delivered in he
 ]
 ]
 
+.footnote[
+[`r icon::fa("link")`](https://bit.ly/bmi569-rmed) https://bit.ly/bmi569-rmed
+]
+
+
 ???
 
 Assignments are delivered as projects in RStudio Cloud within the Data Analytics Workspace.
@@ -233,6 +238,11 @@ Clinicians tend to be hard on themselves.
 knitr::include_graphics("image/lace.jpg")
 ```
 ]
+
+.footnote[
+[`r icon::fa("link")`](https://bit.ly/bmi569-rmed) https://bit.ly/bmi569-rmed
+]
+
 ---
 # The Data
 
@@ -247,10 +257,20 @@ knitr::include_graphics("image/lace.jpg")
 knitr::include_graphics("image/data_warehouse.jpg")
 ```
 ]
+
+.footnote[
+[`r icon::fa("link")`](https://bit.ly/bmi569-rmed) https://bit.ly/bmi569-rmed
+]
+
 ---
 ```{r}
 knitr::include_graphics("image/org_challenges.png")
 ```
+
+.footnote[
+[`r icon::fa("link")`](https://bit.ly/bmi569-rmed) https://bit.ly/bmi569-rmed
+]
+
 
 ---
 class: center, middle, inverse
@@ -307,7 +327,9 @@ knitr::include_graphics("image/boss2.gif")
 ```
 ]
 
-
+.footnote[
+[`r icon::fa("link")`](https://bit.ly/bmi569-rmed) https://bit.ly/bmi569-rmed
+]
 ---
 class: center, middle, inverse
 # Outcomes: Presentation Examples
@@ -384,6 +406,10 @@ Taking the Data Analytics course made me a .b[much more patient and effective co
 — Kristen Stevens, MD/PhD Candidate
 ]]
 
+.footnote[
+[`r icon::fa("link")`](https://bit.ly/bmi569-rmed) https://bit.ly/bmi569-rmed
+]
+
 ---
 # Themes: Diversity
 
@@ -394,6 +420,11 @@ Taking the Data Analytics course made me a .b[much more patient and effective co
 — Meenakashi Mishra, Clinical Informatics Fellow
 ]]
 
+.footnote[
+[`r icon::fa("link")`](https://bit.ly/bmi569-rmed) https://bit.ly/bmi569-rmed
+]
+
+
 ---
 # Themes: Soup to Nuts
 
@@ -402,6 +433,23 @@ Taking the Data Analytics course made me a .b[much more patient and effective co
 .tr[
 — Pierrette Lo, Relationship Manager/Data Scientist
 ]]
+
+.footnote[
+[`r icon::fa("link")`](https://bit.ly/bmi569-rmed) https://bit.ly/bmi569-rmed
+]
+
+---
+# The Future
+
+.bg-washed-green.b--dark-green.ba.bw2.br3.shadow-5.ph4.mt5[
+As a clinician, to see how a data analysis works and how algorithms result in a recommendation was very helpful.
+
+... informatics programs .[should expand their technical analytics courses for clinicians and other clinical informatics students]. Perhaps some day there will be a formal role for clinician-data scientists in the healthcare industry outside of research, and if there will be it starts with courses like this.
+
+.tr[
+— Frank Logano, MD, Clinician
+]
+]
 
 ---
 # We won an award!
@@ -416,9 +464,13 @@ Lastly, nominators said that Dr. Laderas offers generous feedback and considerab
 ---
 # Conclusions
 
-- Melding practical and organizational skills 
+- Course combines practical and organizational skills 
 - Talk about real life lessons
 - Apply that knowledge
+
+.footnote[
+[`r icon::fa("link")`](https://bit.ly/bmi569-rmed) https://bit.ly/bmi569-rmed
+]
 
 ---
 background-image: url("image/class.jpg")
@@ -437,7 +489,16 @@ background-image: url("image/class.jpg")
 
 Slides: [`r icon::fa("link")`](https://bit.ly/bmi569-rmed) https://bit.ly/bmi569-rmed 
 
-Done with `xaringan` and `xaringanExtra`]]
+Done with `xaringan` and `xaringanExtra`
+
+- [`r icon::fa("envelope")`](mailto:laderast@ohsu.edu) [laderast@ohsu.edu](mailto:laderast@ohsu.edu)  
+- [`r icon::fa("twitter")`](https://twitter.com/tladeras)  [tladeras](https://twitter.com/tladeras)
+- [`r icon::fa("link")`](https://laderast.github.io) [laderast.github.io/](https://laderast.github.io)
+
+]
+
+
+]
 
 .pull-right[
 .bg-light-blue.b--dark-blue.ba.bw2.br3.shadow-5.ph4.mt5.o-85.f5[
@@ -456,4 +517,5 @@ Done with `xaringan` and `xaringanExtra`]]
   ]
 ]
 
-
+---
+background-image: url("image/class.jpg")
