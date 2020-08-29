@@ -495,7 +495,7 @@ Done with `xaringan` and `xaringanExtra`
 - [`r icon::fa("envelope")`](mailto:laderast@ohsu.edu) [laderast@ohsu.edu](mailto:laderast@ohsu.edu)  
 - [`r icon::fa("twitter")`](https://twitter.com/tladeras)  [tladeras](https://twitter.com/tladeras)
 - [`r icon::fa("link")`](https://laderast.github.io) [laderast.github.io/](https://laderast.github.io)
-- https://github.com/laderast/AnalyticsCourse
+- [GitHub Repo](https://github.com/laderast/AnalyticsCourse/tree/2020)
 ]
 
 
