@@ -22,6 +22,31 @@ output:
 options(htmltools.dir.version = FALSE)
 
 knitr::opts_chunk$set(fig.retina = 3, warning = FALSE, message = FALSE, echo=FALSE, out.width = "85%")
+
+library(metathis)
+meta() %>%
+  meta_name("github-repo" = "laderast/rmed_2020_talk") %>% 
+  meta_social(
+    title = "The MD in .Rmd: Teaching Clinicians Data Analytics with R",
+    description = paste(
+      "Describing our BMI569 Data Analytics course in Data Analytics with outcomes",
+      "Presented at R/Medicine 2020."
+    ),
+    url = "https://laderast.github.io/rmed_2020_talk",
+    image = "https://laderast.github.io/rmed_2020_talk/bmi569.png",
+    image_alt = paste(
+      "Title slide of The MD in RMD", 
+      "Learning Data Analytics in R,", 
+      "presented at R/Medicine 2020 by Ted Laderas"
+    ),
+    og_type = "website",
+    og_author = "Ted Laderas",
+    twitter_card_type = "summary_large_image",
+    twitter_creator = "@tladeras",
+    twitter_site = "@tladeras"
+  )
+
+
 ```
 
 ```{r xaringan-themer, include = FALSE}
