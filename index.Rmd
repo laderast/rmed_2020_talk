@@ -66,9 +66,12 @@ style_mono_light(
 xaringanExtra::use_xaringan_extra(c("tile_view", "logo", "tachyons"))
 xaringanExtra::use_panelset()
 xaringanExtra::use_tachyons()
+xaringanExtra::use_share_again()
+
 ```
 
 class: middle, inverse
+
 # The MD in .Rmd
 ### Teaching Clinicians Data Analytics with R
 ### R/Medicine 2020
@@ -84,6 +87,12 @@ Kaiser Permanente Insight
 ### Slides: [`r icon::fa("link")`](https://bit.ly/bmi569-rmed) https://bit.ly/bmi569-rmed
 
 ---
+```{r echo=FALSE}
+xaringanExtra::style_share_again(
+  share_buttons = c("twitter", "linkedin", "pocket")
+)
+```
+
 # Overview
 
 .pull-left[
